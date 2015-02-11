@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils 0.11: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
 <meta name="version" content="S5 1.1" />
 <title>Python: introduzione</title>
 <style type="text/css">
@@ -12,6 +12,7 @@
 .highlight  { background: #111111; color: #ffffff }
 .highlight .c { color: #008800; font-style: italic; background-color: #0f140f } /* Comment */
 .highlight .err { color: #ffffff } /* Error */
+.highlight .esc { color: #ffffff } /* Escape */
 .highlight .g { color: #ffffff } /* Generic */
 .highlight .k { color: #fb660a; font-weight: bold } /* Keyword */
 .highlight .l { color: #ffffff } /* Literal */
@@ -58,6 +59,7 @@
 .highlight .nv { color: #fb660a } /* Name.Variable */
 .highlight .ow { color: #ffffff } /* Operator.Word */
 .highlight .w { color: #888888 } /* Text.Whitespace */
+.highlight .mb { color: #0086f7; font-weight: bold } /* Literal.Number.Bin */
 .highlight .mf { color: #0086f7; font-weight: bold } /* Literal.Number.Float */
 .highlight .mh { color: #0086f7; font-weight: bold } /* Literal.Number.Hex */
 .highlight .mi { color: #0086f7; font-weight: bold } /* Literal.Number.Integer */
@@ -323,6 +325,43 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">b</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">c</span>
 <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">a</span> <span class="n">instance</span> <span class="n">at</span> <span class="mh">0x1ca6cf8</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<div class="slide" id="classi-e-oggetti">
+<h1>Classi e Oggetti</h1>
+<p>Le classi sono lo stampo. Gli oggetti il prodotto finito.</p>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Auto</span><span class="p">:</span>
+<span class="o">...</span>    <span class="n">marca</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="o">...</span>    <span class="n">modello</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">punto</span> <span class="o">=</span> <span class="n">Auto</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">punto</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="s">&#39;FIAT&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">punto</span><span class="o">.</span><span class="n">modello</span> <span class="o">=</span> <span class="s">&#39;Punto 1.2&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">punto</span>
+<span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">Auto</span> <span class="n">instance</span> <span class="n">at</span> <span class="mh">0x105cc7680</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="n">punto</span><span class="p">)</span>
+<span class="p">[</span><span class="s">&#39;__doc__&#39;</span><span class="p">,</span> <span class="s">&#39;__module__&#39;</span><span class="p">,</span> <span class="s">&#39;marca&#39;</span><span class="p">,</span> <span class="s">&#39;modello&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">punto</span><span class="o">.</span><span class="n">marca</span>
+<span class="s">&#39;FIAT&#39;</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<div class="slide" id="i-metodi">
+<h1>I metodi</h1>
+<p>I metodi sono le azioni che i nostri oggetti possono compiere.</p>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Auto</span><span class="p">:</span>
+<span class="o">...</span>    <span class="n">marca</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="o">...</span>    <span class="n">modello</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="o">...</span>    <span class="k">def</span> <span class="nf">accenditi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">...</span>       <span class="k">print</span> <span class="s">&quot;accendo: </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">modello</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">punto</span> <span class="o">=</span> <span class="n">Auto</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">punto</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="s">&#39;FIAT&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">punto</span><span class="o">.</span><span class="n">modello</span> <span class="o">=</span> <span class="s">&#39;Punto 1.2&#39;</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">punto</span><span class="o">.</span><span class="n">accenditi</span><span class="p">()</span>
+<span class="n">accendo</span><span class="p">:</span> <span class="n">FIAT</span> <span class="n">Punto</span> <span class="mf">1.2</span>
 <span class="o">&gt;&gt;&gt;</span>
 </pre></div>
 </div>

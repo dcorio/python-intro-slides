@@ -264,7 +264,50 @@ Le classi sono le fabbriche degli oggetti.
     <__main__.a instance at 0x1ca6cf8>
     >>>
 
+Classi e Oggetti
+----------------
 
+Le classi sono lo stampo. Gli oggetti il prodotto finito.
+
+
+.. sourcecode:: python
+
+    >>> class Auto:
+    ...    marca = ''
+    ...    modello = ''
+    ... 
+    >>> punto = Auto()
+    >>> punto.marca = 'FIAT'
+    >>> punto.modello = 'Punto 1.2'
+    >>> punto
+    <__main__.Auto instance at 0x105cc7680>
+    >>> dir(punto)
+    ['__doc__', '__module__', 'marca', 'modello']
+    >>> punto.marca
+    'FIAT'
+    >>> 
+
+I metodi
+--------
+
+I metodi sono le azioni che i nostri oggetti possono compiere.
+
+
+.. sourcecode:: python
+
+    >>> class Auto:
+    ...    marca = ''
+    ...    modello = ''
+    ...    def accenditi(self):
+    ...       print "accendo: %s %s" % (self.marca, self.modello)
+    ... 
+    >>> punto = Auto()
+    >>> punto.marca = 'FIAT'
+    >>> punto.modello = 'Punto 1.2'
+    >>> 
+    >>> punto.accenditi()
+    accendo: FIAT Punto 1.2
+    >>> 
 
 Interfacce grafiche con Qt
 --------------------------
