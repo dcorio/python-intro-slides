@@ -309,6 +309,45 @@ I metodi sono le azioni che i nostri oggetti possono compiere.
     accendo: FIAT Punto 1.2
     >>> 
 
+I metodi
+--------
+
+I metodi possono ovviamente ricevere dei parametri.
+
+
+.. sourcecode:: python
+
+    >>> class Auto:
+    ...    marca = ''
+    ...    modello = ''
+    ...    def azione(self, azione):
+    ...       print "azione: %s %s %s" % (azione, self.marca, self.modello)
+    ...
+    >>> punto = Auto()
+    >>> punto.marca = 'FIAT'
+    >>> punto.modello = 'Punto 1.2'
+    >>>
+    >>> punto.azione('accendo')
+    azione: accendo FIAT Punto 1.2
+    >>>
+
+Ereditarietà
+------------
+
+Possiamo creare una classe che "eredita" da un'altra.
+
+    >>> class Berlina(Auto):
+    ...    porte = 4
+    ... 
+    >>> bravo = Berlina()
+    >>> bravo.porte
+    4
+    >>> bravo.marca = 'FIAT?
+    >>> bravo.marca = 'FIAT'
+    >>> dir(bravo)
+    ['__doc__', '__module__', 'azione', 'marca', 'modello', 'porte']
+    >>> 
+
 Interfacce grafiche con Qt
 --------------------------
 

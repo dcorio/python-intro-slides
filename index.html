@@ -365,6 +365,43 @@
 <span class="o">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
+<div class="slide" id="id1">
+<h1>I metodi</h1>
+<p>I metodi possono ovviamente ricevere dei parametri.</p>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Auto</span><span class="p">:</span>
+<span class="o">...</span>    <span class="n">marca</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="o">...</span>    <span class="n">modello</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="o">...</span>    <span class="k">def</span> <span class="nf">azione</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">azione</span><span class="p">):</span>
+<span class="o">...</span>       <span class="k">print</span> <span class="s">&quot;azione: </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">azione</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">modello</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">punto</span> <span class="o">=</span> <span class="n">Auto</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">punto</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="s">&#39;FIAT&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">punto</span><span class="o">.</span><span class="n">modello</span> <span class="o">=</span> <span class="s">&#39;Punto 1.2&#39;</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">punto</span><span class="o">.</span><span class="n">azione</span><span class="p">(</span><span class="s">&#39;accendo&#39;</span><span class="p">)</span>
+<span class="n">azione</span><span class="p">:</span> <span class="n">accendo</span> <span class="n">FIAT</span> <span class="n">Punto</span> <span class="mf">1.2</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<div class="slide" id="ereditarieta">
+<h1>Ereditarietà</h1>
+<p>Possiamo creare una classe che &quot;eredita&quot; da un'altra.</p>
+<blockquote>
+<pre class="doctest-block">
+&gt;&gt;&gt; class Berlina(Auto):
+...    porte = 4
+...
+&gt;&gt;&gt; bravo = Berlina()
+&gt;&gt;&gt; bravo.porte
+4
+&gt;&gt;&gt; bravo.marca = 'FIAT?
+&gt;&gt;&gt; bravo.marca = 'FIAT'
+&gt;&gt;&gt; dir(bravo)
+['__doc__', '__module__', 'azione', 'marca', 'modello', 'porte']
+&gt;&gt;&gt;
+</pre>
+</blockquote>
+</div>
 <div class="slide" id="interfacce-grafiche-con-qt">
 <h1>Interfacce grafiche con Qt</h1>
 <p>Installare QtDesigner e PyQt4:</p>
